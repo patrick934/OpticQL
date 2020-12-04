@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './app';
-import { DBConfig } from './dbConfig';
+import App from './App';
+import { DBConfig } from './DBConfig';
 import { initDB } from 'react-indexed-db';
 import { HashRouter } from 'react-router-dom';
 
