@@ -1,11 +1,9 @@
 import React from 'react';
 import { configure, shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import toJson from 'enzyme-to-json';
-import sinon from 'sinon';
 
 import FullViz from '../client/fullVizView.jsx'
-import GraphViz from '../client/Viz.jsx';
+import GraphViz from '../client/graphViz.jsx';
 import ExpandPerfData from '../client/expandPerfData.jsx';
 import TestWindow from '../client/testWindow.jsx';
 
@@ -52,27 +50,6 @@ describe('React unit tests', () => {
     });
   });
 
-
-  // describe('Viz.js', () => {
-  //   let wrapper;
-    
-  //   const props = {
-  //     height: "1000px",
-  //     width: "100%",
-  //     fullGraph: true
-  //   };
-    
-  //   beforeAll(() => {
-  //     wrapper = mount(<GraphViz {...props}/>);
-  //   });
-
-  //   it('Passes props to GraphViz correctly', () => {
-  //     // expect(wrapper.containsMatchingElement(<GraphViz height={props.height} width={props.width} fullGraph={props.fullGraph} />)).toEqual(true);
-  //     expect(wrapper.type()).toEqual('div');
-
-  //   });
-  // });
-
   describe('ExpandPerfData', () => {
     let wrapper;
     
@@ -86,12 +63,6 @@ describe('React unit tests', () => {
 
     it('Passes props to GraphViz correctly', () => {
       expect(wrapper.containsMatchingElement(<TestWindow />)).toEqual(true);
-      // wrapper cannot find TestWindow
-
-
-
-      // props.showWindow = true;
-      // expect(wrapper.containsMatchingElement(<TestWindow />)).toEqual(true);
     });
   });
 
